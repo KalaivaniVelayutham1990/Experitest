@@ -1,0 +1,15 @@
+describe('Protractor', function () {
+
+    var ec = protractor.ExpectedConditions;
+    var menuButton=element(by.id('menu-button'))    
+    it('Demo check', async function(){
+try{
+    await browser.waitForAngularEnabled(false);
+    await browser.get('https://paypal.com/us/home');
+    await broswer.wait(ec.elementToBeclickable(menuButton),5000);
+    await menuButton.click();
+}catch(err){
+    console.log(err);
+}
+    });
+});
